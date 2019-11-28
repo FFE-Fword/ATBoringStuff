@@ -30,8 +30,32 @@ while True: # The main game loop
         computerMove = "r"
         print("ROCK")
     elif randomNumber == 2:
-        computerMove == "p"
+        computerMove = "p"
         print("PAPER")
     elif randomNumber == 3:
-        computerMove == "s"
+        computerMove = "s"
         print("SCISSORS")
+
+    #Display and record the win/loss/tie:
+    if playerMove == computerMove:
+        print("It's a tie!")
+        ties += 1
+    elif playerMove == "r" and computerMove == "s":
+        print("You Win!")
+        wins += 1 
+    elif playerMove == "p" and computerMove == "r":
+        print("You Win!")
+        wins += 1 
+    elif playerMove == "s" and computerMove == "p":
+        print("You Win!")
+        wins += 1 
+    elif playerMove == "r" and computerMove == "p":
+        print("You Lose!")
+        losses += 1 
+    elif playerMove == "p" and computerMove == "s":
+        print("You Lose!")
+        losses += 1 
+    elif playerMove == "s" and computerMove == "r":
+        print("You Lose!")
+        losses += 1 
+   
